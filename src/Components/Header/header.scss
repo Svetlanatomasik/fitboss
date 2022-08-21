@@ -1,4 +1,28 @@
 .header {
-    background-color: yellow;
-    padding: 50px;
+  background-color: rgb(154, 243, 154);
+  padding: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+      gap: 25px;
+      font-size: 18px;
+      list-style-type: none;
+      margin: 0 10px;
+      padding: 5px;
+      cursor: pointer;
+      color: black;
+
+    }
+  }
 }

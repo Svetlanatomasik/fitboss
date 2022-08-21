@@ -7,7 +7,6 @@ function Header() {
     <div className="header">
       <h1>FitBoss</h1>
       <ul>
-
         <Link to="/">
           <li>Home</li>
         </Link>
@@ -27,7 +26,6 @@ function Header() {
         <Link to="contact">
           <li>Contact</li>
         </Link>
-
       </ul>
     </div>
   );

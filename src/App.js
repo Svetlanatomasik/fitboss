@@ -5,6 +5,7 @@ import AboutUs from "./Pages/AboutUs";
 import Contact from "./Pages/Contact";
 import News from "./Pages/News";
 import Recipes from "./Pages/Recipes";
+import Header from "./Components/Header";
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +17,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+        
+      <Header/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/news" element={<News />} />
