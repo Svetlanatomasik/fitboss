@@ -41,15 +41,23 @@ function CalorieCalculator() {
 
   return (
     <div className="calorie-calculator">
+      
       <h2>Calorie Calculator</h2>
+      <div className="text">
       The Calorie Calculator can be used to estimate the number of calories a
       person needs to consume each day. This calculator can also provide some
       simple guidelines for gaining or losing weight.
-      <div>How many calories should you eat per day?</div>
-      <div>Check out!</div>
-      <div className="Gender">
+      </div>
+      <h4 className="many-calories">How many calories should you eat per day?</h4>
+      <h4>Check out!</h4>
+     
+
+      <div className="center-calculator">
+        <div>
+      <div className="gender">
         Gender:
         <Select
+          className="select"
           onChange={(gender) => setGender(gender.value)}
           options={options}
           placeholder="Choose gender..."
@@ -70,6 +78,8 @@ function CalorieCalculator() {
       <Input text="Age:" name="age" value={age} onChange={handleAge} />
       <button onClick={calculateCalories}>Calculate</button>
       <Input text="Your daily calories:" value={calculatedValue} />
+    </div>
+    </div>
     </div>
   );
 }

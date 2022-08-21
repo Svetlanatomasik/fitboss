@@ -3,7 +3,7 @@ import "./footer.scss"
 
 function Footer () {
     return <div className="footer">
-        <h3>Footer</h3>
+        <h3>&copy; Created by Svetlana Tomašik</h3>
     </div>
 }
 

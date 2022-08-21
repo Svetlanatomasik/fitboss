@@ -1,6 +1,54 @@
 .calorie-calculator {
-    width: 30%;
-    height: 100vh;
-    padding: 10px;
-    background-color: rgb(249, 255, 163);
+  width: 30%;
+  height: 100vh;
+  padding: 15px;
+  background-image: url("../../Images/orangeBcg.png");
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  .text {
+    border-radius: 10px;
+    padding: 5px;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
+  }
+
+  h4 {
+    margin: 20px 0;
+  }
+
+  .center-calculator {
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    -webkit-box-shadow: 0px 2px 11px -2px #000000;
+    box-shadow: 0px 2px 11px -2px #000000;
+    border: 2px solid yellow;
+
+    .gender {
+      margin-top: 20px;
+
+      .select {
+        border-radius: 5px;
+        border: none;
+        width: 200px;
+        -webkit-box-shadow: 0px 2px 11px -2px #000000;
+        box-shadow: 0px 2px 11px -2px #000000;
+      }
+    }
+  }
+
+  button {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fdfbd9;
+    -webkit-box-shadow: 0px 2px 11px -2px #000000;
+    box-shadow: 0px 2px 11px -2px #000000;
+    border: none;
+    padding: 5px;
+  }
 }

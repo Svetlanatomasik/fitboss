@@ -11,10 +11,6 @@ function Header() {
           <li>Home</li>
         </Link>
 
-        <Link to="/news">
-          <li>News</li>
-        </Link>
-
         <Link to="/recipes">
           <li>Recipes</li>
         </Link>
