@@ -1,0 +1,31 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../Images/orangeBcg.png");
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-container {
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0px 2px 11px -2px #000000;
+    box-shadow: 0px 2px 11px -2px #000000;
+    border: 2px solid yellow;
+  }
+
+  .closeBtn {
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+  }
+}

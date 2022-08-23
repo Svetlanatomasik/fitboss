@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./recipes.scss";
+import CardRecipe from "../../Components/CardRecipe";
+import { recipesArray } from "../../Constans/recipe";
 
+const mapRecipes = () => {
+  if (recipesArray) {
+    return recipesArray.map((everything, index) => {
+      return <CardRecipe recipe={everything} index={index} />;
+    });
+  }
+};
 
-function Recipes () {
-    return (
-        <div>
-            <h3>recipes</h3>
-        </div>
-    )
+function RecipesPage() {
+  return (
+    <div>
+      <div>
+        <div className="description">{mapRecipes()}</div>
+      </div>
+    </div>
+  );
 }
 
-export default Recipes;
+export default RecipesPage;

@@ -80,7 +80,6 @@ function HomePage() {
             about the same times every day.
           </div>
           <img src={SleepWell} alt="sleep"></img>
-          
         </div>
       </div>
       <Footer />

@@ -29,57 +29,57 @@ function CalorieCalculator() {
   const calculateCalories = () => {
     if (gender === "male") {
       const calculatedMale =
-        662 - 9.53 * age + (1.11 * [15.91 * weight + 539.6 * height]) / 4;
-      console.log("calculatedMale ", calculatedMale);
+        662 - 9.53 * age + (1.11 * [15.91 * weight + 539.6 * height]) / 40;
+      // console.log("calculatedMale ", calculatedMale);
       setCalculatedValue(parseInt(calculatedMale));
     } else {
       const calculatedFemale =
-        354 - 6.91 * age + (1.12 * [9.36 * weight + 726 * height]) / 6;
+        354 - 6.91 * age + (1.12 * [9.36 * weight + 726 * height]) / 60 ;
       setCalculatedValue(parseInt(calculatedFemale));
     }
   };
 
   return (
     <div className="calorie-calculator">
-      
       <h2>Calorie Calculator</h2>
       <div className="text">
-      The Calorie Calculator can be used to estimate the number of calories a
-      person needs to consume each day. This calculator can also provide some
-      simple guidelines for gaining or losing weight.
+        The Calorie Calculator can be used to estimate the number of calories a
+        person needs to consume each day. This calculator can also provide some
+        simple guidelines for gaining or losing weight.
       </div>
-      <h4 className="many-calories">How many calories should you eat per day?</h4>
+      <h4 className="many-calories">
+        How many calories should you eat per day?
+      </h4>
       <h4>Check out!</h4>
-     
 
       <div className="center-calculator">
         <div>
-      <div className="gender">
-        Gender:
-        <Select
-          className="select"
-          onChange={(gender) => setGender(gender.value)}
-          options={options}
-          placeholder="Choose gender..."
-        />
+          <div className="gender">
+            Gender:
+            <Select
+              className="select"
+              onChange={(gender) => setGender(gender.value)}
+              options={options}
+              placeholder="Choose gender..."
+            />
+          </div>
+          <Input
+            text="Height in meters:"
+            name="height"
+            value={height}
+            onChange={handleHeight}
+          />
+          <Input
+            text="Weight in kilograms:"
+            name="weight"
+            value={weight}
+            onChange={handleWeight}
+          />
+          <Input text="Age:" name="age" value={age} onChange={handleAge} />
+          <button onClick={calculateCalories}>Calculate</button>
+          <Input text="Your daily calories:" value={calculatedValue} />
+        </div>
       </div>
-      <Input
-        text="Height in meters:"
-        name="height"
-        value={height}
-        onChange={handleHeight}
-      />
-      <Input
-        text="Weight in kilograms:"
-        name="weight"
-        value={weight}
-        onChange={handleWeight}
-      />
-      <Input text="Age:" name="age" value={age} onChange={handleAge} />
-      <button onClick={calculateCalories}>Calculate</button>
-      <Input text="Your daily calories:" value={calculatedValue} />
-    </div>
-    </div>
     </div>
   );
 }
