@@ -14,7 +14,7 @@ const mapRecipes = () => {
 function RecipesPage() {
   return (
     <div>
-      <div>
+      <div className="about-recipe">
         <div className="description">{mapRecipes()}</div>
       </div>
     </div>

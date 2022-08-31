@@ -3,15 +3,18 @@ import "./modal.scss";
 import CardRecipe from "../../Components/CardRecipe";
 import { recipesArray } from "../../Constans/recipe";
 
-const FullRecipe = () => {
+const FullRecipe = (index) => { 
+  console.log('recipes ', recipesArray);
+  console.log('recipe ', recipesArray[index]);
+  console.log('index ', index)
   if (recipesArray) {
-    return recipesArray.map((part, index) => {
-      return <CardRecipe recipe={part} index={index} />;
-    });
+    return <CardRecipe recipe={recipesArray[index]} index={index} />
   }
 };
 
-function Modal({ closeModal }, recipeName) {
+
+
+function Modal({ closeModal , recipeNumber}) {
   return (
     <div className="modalBackground">
       <div className="modal-container">
@@ -19,7 +22,7 @@ function Modal({ closeModal }, recipeName) {
           X
         </button>
 
-        <div className="full-recipe">{FullRecipe()}</div>
+        <div className="full-recipe">{FullRecipe(recipeNumber)}</div>
 
         <button className="close-recipe" onClick={() => closeModal(false)}>
           Close recipe

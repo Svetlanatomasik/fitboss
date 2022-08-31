@@ -1,45 +1,37 @@
 import React, { useState } from "react";
 import "./cardRecipe.scss";
 import Modal from "../../Components/Modal";
-
-function FullRecipeBtn() {
-  const [openModal, setOpenModal] = useState(false);
-
-  return (
-    <div>
-      <button
-        className="openModalBtn"
-        onClick={() => {
-          setOpenModal(true);
-        }}
-      >
-        Full recipe
-      </button>
-      {openModal && <Modal closeModal={setOpenModal} />}
-    </div>
-  );
-}
+import FullDetails from "../FullDetails";
 
 const CardRecipe = (props) => {
+  const [openModal, setOpenModal] = useState();
   const { recipe, index } = props;
+  console.log("openModal ", openModal);
+
   return (
     <div className="card-recipe">
       <div key={index}>
-        <div>{recipe.recipeName}</div>
-        <img src={recipe.image} alt="Recipe" />
-        <div>{recipe.prepTime}</div>
-        <div>{recipe.cookTime}</div>
-        <ul>
-          {recipe.ingredients.map((ingredient, index) => {
-            return <li key={index}>{ingredient}</li>;
-          })}
-        </ul>
-        <ul>
-          {recipe.procedure.map((procedure, index) => {
-            return <li key={index}>{procedure}</li>;
-          })}
-        </ul>
-        <div>{FullRecipeBtn()}</div>
+        <div className="wrapper">
+          <img className="recipe-img" src={recipe.image} alt="Recipe" />
+          <div className="info">
+            <div className="title">{recipe.recipeName}</div>
+            <div>{`Prep: ${recipe.prepTime}`}</div>
+            <div>{`Cook: ${recipe.cookTime}`}</div>
+          </div>
+        </div>
+
+        {openModal && <FullDetails recipe={recipe} />}
+        {!openModal && (
+          <button
+            className="openModalBtn"
+            onClick={() => {
+              setOpenModal(true);
+            }}
+          >
+            Full recipe
+          </button>
+        )}
+        {openModal && <Modal closeModal={setOpenModal} recipeNumber={index} />}
       </div>
     </div>
   );

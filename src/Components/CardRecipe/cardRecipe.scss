@@ -1,7 +1,14 @@
 .card-recipe {
+  .wrapper {
     display: flex;
 
-    img {
-        width: 300px;
+    .recipe-img {
+      width: 300px;
+      border-radius: 5px;
     }
+
+    .title {
+        font-size: 30px;
+    }
+  }
 }
