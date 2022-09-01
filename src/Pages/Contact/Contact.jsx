@@ -1,9 +1,11 @@
 import React from "react";
 import "./contact.scss";
 import ContactPic from "../../Images/contactUs.jpg";
+import Footer from "../../Components/Footer";
 
 function Contact() {
   return (
+    <>
     <div className="contact-us">
       <div className="info">
         <div className="details">
@@ -19,6 +21,8 @@ function Contact() {
 
       <img src={ContactPic} alt="slika" />
     </div>
+    <Footer />
+    </>
   );
 }
 
